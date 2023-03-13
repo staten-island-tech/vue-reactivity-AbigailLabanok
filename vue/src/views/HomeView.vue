@@ -1,15 +1,17 @@
 <template>
   <div class="home">
-    <Button />
+    <CoolButton @btn-click="bye">button one</CoolButton>
+    <!-- @click works perfectly fine as well-->
+    <CoolButton @btn-click="hello">button two</CoolButton>
   </div>
 </template>
 
 <script>
-import Button from "../components/CoolButton.vue";
+import CoolButton from "../components/CoolButton.vue";
 export default {
   name: "home",
   components: {
-    Button,
+    CoolButton,
   },
   data() {
     return {
@@ -29,6 +31,12 @@ export default {
     },
   },
   methods: {
+    hello: function () {
+      alert("hello");
+    },
+    bye: function () {
+      alert("bye");
+    },
     authState: function () {
       if (this.loggedIn === false) {
         this.loggedIn = true;

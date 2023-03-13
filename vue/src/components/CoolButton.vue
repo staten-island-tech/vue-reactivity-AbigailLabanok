@@ -1,16 +1,14 @@
 <template>
-  <div>
-    <button>test</button>
-  </div>
+    <button @click="$emit('btn-click')"><slot></slot></button>
 </template>
 
 <script>
 export default {
-  name: "Button",
+  name: "CoolButton",
 };
 </script>
 
-<style>
+<style scoped>
 button {
   widows: 200px;
   font-size: 30px;
