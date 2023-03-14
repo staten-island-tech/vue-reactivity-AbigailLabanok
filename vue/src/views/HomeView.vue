@@ -3,15 +3,22 @@
     <CoolButton @btn-click="bye">button one</CoolButton>
     <!-- @click works perfectly fine as well-->
     <CoolButton @btn-click="hello">button two</CoolButton>
+    <CardDemo
+      title="hello world"
+      description="wowie omg im writing stuff in the description and its gonna magically end up popping up onto the scren :DDDDD"
+      image="https://images.wsj.net/im-140539?width=1280&size=1"
+    />
   </div>
 </template>
 
 <script>
 import CoolButton from "../components/CoolButton.vue";
+import CardDemo from "../components/CardDemo.vue";
 export default {
   name: "home",
   components: {
     CoolButton,
+    CardDemo,
   },
   data() {
     return {
