@@ -2,7 +2,7 @@
   <div class="card">
     <h2>{{ title }}</h2>
     <img :src="image" alt="" />
-    <p>{{ description }}</p>
+    <p>{{ price }}</p>
   </div>
 </template>
 
@@ -11,20 +11,25 @@ export default {
   name: "CardDemo",
   props: {
     title: String,
-    description: String,
+    price: Number,
     image: String,
+  },
+  computed: {
+    getImage: function () {
+      return this.image;
+    },
   },
 };
 </script>
 
 <style>
 .card {
-  width: 30%;
+  width: 100%;
   background-color: red;
   height: 500px;
   margin: 10px auto;
 }
 img {
-  height: 30%;
+  height: 50%;
 }
 </style>
