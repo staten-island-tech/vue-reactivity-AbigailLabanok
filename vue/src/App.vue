@@ -14,9 +14,19 @@ import { RouterLink, RouterView } from "vue-router";
 
   <RouterView />
 </template>
-<!-- 
+ 
 <style scoped>
-header {
+
+nav a {
+  display: inline-block;
+  padding: 0 1rem;
+  border-left: 1px solid var(--color-border);
+}
+nav a:first-of-type {
+  border: 0;
+}
+
+/* header {
   line-height: 1.5;
   max-height: 100vh;
 }
@@ -52,6 +62,5 @@ nav a:first-of-type {
     text-align: center;
     font-size: 1rem;
   }
-}
+} */
 </style>
- -->

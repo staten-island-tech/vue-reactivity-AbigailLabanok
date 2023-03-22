@@ -1,6 +1,73 @@
 @import "./base.css";
-/*  
-#app {
+
+html,
+body,
+* {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-family: "Bitter", serif;
+}
+:root {
+  --black: #000;
+  --white: #ffffff;
+  --color1: #f9ffff;
+  --color2: #2b2d32;
+  --color3: #184a76;
+  --color4: #1e96d5;
+
+  /*Intentions*/
+  --primary: var(--color1);
+  --secondary: var(--color2);
+  --tertiary: var(--color3);
+  --quaternary: var(--color4);
+
+  /*Typography*/
+  --h1: 7.594rem;
+  --h2: 4.813rem;
+  --h3: 3.375rem;
+  --h4: 2.25rem;
+  --h5: 1.5rem;
+}
+
+h1 {
+  font-size: var(--h1);
+  color: var(--tertiary);
+  margin-bottom: 1rem;
+}
+h2 {
+  font-size: var(--h2);
+}
+
+h3 {
+  font-size: var(--h3);
+}
+
+h4 {
+  font-size: var(--h4);
+}
+
+h5 {
+  font-size: var(--h5);
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-align: center;
+}
+body {
+  background-color: var(--primary);
+}
+nav {
+  font-size: var(--h1);
+  color: var(--tertiary);
+}
+
+/*  #app {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
