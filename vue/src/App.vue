@@ -14,9 +14,8 @@ import { RouterLink, RouterView } from "vue-router";
 
   <RouterView />
 </template>
- 
-<style scoped>
 
+<style scoped>
 nav a {
   display: inline-block;
   padding: 0 1rem;
