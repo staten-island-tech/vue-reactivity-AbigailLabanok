@@ -5,14 +5,13 @@ import { RouterLink, RouterView } from "vue-router";
 <template>
   <header>
     <div class="wrapper">
+      <RouterView />
       <nav>
-        <RouterLink to="/">Menu</RouterLink>
+        <RouterLink to="/">Shop</RouterLink>
         <RouterLink to="/Cart">Cart</RouterLink>
       </nav>
     </div>
   </header>
-
-  <RouterView />
 </template>
 
 <style scoped>

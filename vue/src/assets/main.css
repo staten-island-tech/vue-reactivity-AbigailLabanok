@@ -63,7 +63,7 @@ body {
   background-color: var(--primary);
 }
 nav {
-  font-size: var(--h1);
+  font-size: var(--h3);
   color: var(--tertiary);
 }
 
