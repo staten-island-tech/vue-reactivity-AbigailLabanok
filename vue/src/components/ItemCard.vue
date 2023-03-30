@@ -1,9 +1,10 @@
 <template>
   <div class="card">
     <h2>{{ title }}</h2>
-    <h3>{{ type }}</h3>
+    <h3>({{ type }})</h3>
     <img :src="image" alt="" />
     <p>{{ price }}</p>
+    <button>Add To Cart</button>
   </div>
 </template>
 
@@ -28,10 +29,10 @@ export default {
 @import "../assets/main.css";
 .card {
   width: 30%;
-  background-color: #6bc0ed;
+  background-color: #97d3f3;
   border: solid 1rem #2b2d32;
   border-radius: 2rem;
-  height: 50rem;
+  height: 70rem;
   margin: 2rem auto;
   padding: 1rem;
   text-align: center;

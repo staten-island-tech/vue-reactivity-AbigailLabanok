@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1>Shop</h1>
+    <h1>Card Shop</h1>
     <div class="display">
       <ItemCard
         v-for="card in cards"
@@ -60,11 +60,14 @@ export default {
 };
 </script>
 
-<style lang="css" scoped>
+<style scoped>
 .display {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
+}
+h1 {
+  text-decoration: underline;
 }
 </style>
