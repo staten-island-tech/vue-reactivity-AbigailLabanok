@@ -1,6 +1,16 @@
 <template>
   <main>
     <h1>Shop</h1>
+    <div class="display">
+      <ItemCard
+        v-for="card in cards"
+        :key="card.name"
+        :title="card.name"
+        :type="card.type"
+        :price="card.price"
+        :image="card.img"
+      />
+    </div>
   </main>
 </template>
 
@@ -13,7 +23,7 @@ export default {
   },
   data() {
     return {
-      ItemArr: [
+      cards: [
         {
           name: "Game Master",
           type: "Cheat",
@@ -50,4 +60,11 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="css" scoped>
+.display {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+}
+</style>
