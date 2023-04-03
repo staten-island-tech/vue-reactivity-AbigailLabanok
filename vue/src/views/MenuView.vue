@@ -6,7 +6,7 @@
       <ItemCard
         v-for="card in cards"
         :key="card.name"
-        :title="card.name"
+        :name="card.name"
         :type="card.type"
         :price="card.price"
         :image="card.img"

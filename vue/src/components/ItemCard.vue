@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <h2>{{ title }}</h2>
+    <h2>{{ name }}</h2>
     <h3>({{ type }})</h3>
     <img :src="image" alt="" />
     <p>{{ price }} Coins</p>
@@ -14,7 +14,7 @@ import { cart } from "../CartArr";
 export default {
   name: "ItemCard",
   props: {
-    title: String,
+    name: String,
     type: String,
     price: Number,
     image: String,
