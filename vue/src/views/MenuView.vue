@@ -1,6 +1,7 @@
 <template>
   <main>
     <h1>Card Shop</h1>
+    <div class="cart"></div>
     <div class="display">
       <ItemCard
         v-for="card in cards"
@@ -23,6 +24,7 @@ export default {
   },
   data() {
     return {
+      showingShop: true,
       cards: [
         {
           name: "Game Master",
@@ -66,8 +68,5 @@ export default {
   justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
-}
-h1 {
-  text-decoration: underline;
 }
 </style>

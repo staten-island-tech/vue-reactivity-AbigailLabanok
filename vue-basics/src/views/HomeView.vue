@@ -1,13 +1,13 @@
 <template>
   <div class="home">
-<!--     <h1 v-if="graduated">{{ student }}</h1>
+    <!--     <h1 v-if="graduated">{{ student }}</h1>
     <h1 v-else>"They did not yet graduate"</h1>
     <ul>
       <li v-for="animal in animals" :key="animal">{{ animal }}</li>
-    </ul>
+    </ul> -->
     <button @click="authState" v-if="loggedIn">Log Out</button>
     <button @click="authState" v-else>Login</button>
-    <input type="text" placeholder="edit me" v-model="message" />
+    <!-- <input type="text" placeholder="edit me" v-model="message" />
     <p>{{ message }}</p>
     <input type="checkbox" id="jack" value="jack" v-model="checkedNames" />
     <label for="jack">jack</label>

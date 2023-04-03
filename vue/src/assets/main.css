@@ -36,6 +36,7 @@ h1 {
   font-size: var(--h1);
   color: var(--tertiary);
   margin-bottom: 1rem;
+  text-decoration: underline;
 }
 h2 {
   font-size: var(--h2);

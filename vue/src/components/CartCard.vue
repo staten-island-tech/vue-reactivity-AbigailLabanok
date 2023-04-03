@@ -4,35 +4,20 @@
     <h3>({{ type }})</h3>
     <img :src="image" alt="" />
     <p>{{ price }}</p>
-    <button @click="AddtoCart">Add To Cart</button>
+    <button @click="RemovefromCart">Remove from Cart</button>
   </div>
 </template>
 
 <script>
-import { cart } from "../CartArr";
-
 export default {
-  name: "ItemCard",
+  name: "CartCard",
   props: {
     title: String,
     type: String,
     price: Number,
     image: String,
   },
-  methods: {
-    AddtoCart: function () {
-      if (cart.cartArr.includes(this.title)) {
-        console.log("already has");
-      } else {
-        cart.cartArr.push({
-          title: this.title,
-          price: this.price,
-          image: this.image,
-        });
-      }
-      console.log(cart.cartArr);
-    },
-  },
+  methods: {},
   computed: {
     getImage: function () {
       return this.image;
@@ -41,7 +26,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 @import "../assets/main.css";
 .card {
   width: 30%;
