@@ -4,7 +4,7 @@
   <div v-for="item in cartArr" class="cart">
     <h3>{{ item.name }}</h3>
     <h4>({{ item.price }} Coins)</h4>
-    <button @click="RemovefromCart">Remove from Cart</button>
+    <button @click="RemovefromCart(item)">Remove from Cart</button>
   </div>
 </template>
 
@@ -20,9 +20,9 @@ export default {
     };
   },
   methods: {
-    RemovefromCart: function () {
-      this.cartArr.splice(this.name, 1);
-      this.totalPrice -= this.price;
+    RemovefromCart: function (item) {
+      this.cartArr.splice(item.name, 1);
+      this.totalPrice = Number(this.totalPrice) - Number(item.price);
       console.log(this.cartArr, this.totalPrice);
     },
   },
