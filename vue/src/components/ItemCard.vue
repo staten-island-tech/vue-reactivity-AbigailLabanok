@@ -3,7 +3,7 @@
     <h2>{{ title }}</h2>
     <h3>({{ type }})</h3>
     <img :src="image" alt="" />
-    <p>{{ price }}</p>
+    <p>{{ price }} Coins</p>
     <button @click="AddtoCart">Add To Cart</button>
   </div>
 </template>
@@ -21,16 +21,13 @@ export default {
   },
   methods: {
     AddtoCart: function () {
-      if (cart.cartArr.includes(this.title)) {
-        console.log("already has");
-      } else {
-        cart.cartArr.push({
-          title: this.title,
-          price: this.price,
-          image: this.image,
-        });
-      }
-      console.log(cart.cartArr);
+      cart.cartArr.push({
+        name: this.name,
+        price: this.price,
+        image: this.image,
+      });
+      cart.totalPrice += this.price;
+      console.log(cart.cartArr, cart.totalPrice);
     },
   },
   computed: {

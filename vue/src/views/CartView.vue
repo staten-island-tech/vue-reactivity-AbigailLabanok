@@ -1,29 +1,26 @@
 <template>
   <div class="cart">
     <h1>CART</h1>
-    <h2>Total Price:</h2>
+    <h2>Total Price: {{ totalPrice }} Coins</h2>
   </div>
-  <div class="display">
-    <CartCard
-      v-for="item in cartitems"
-      :key="item.name"
-      :title="item.name"
-      :type="item.type"
-      :price="item.price"
-      :image="item.img"
-    />
+  <div class="card">
+    <h2 v-for="item in cartArr">{{ item.title }}</h2>
+    <h3 v-for="item in cartArr">{{ item.price }} Coins</h3>
+    <button @click="RemovefromCart">Remove from Cart</button>
   </div>
 </template>
 
 <script>
-import CartCard from "../components/CartCard.vue";
 import { cart } from "../CartArr";
 export default {
   name: "cart",
-  components: {
-    CartCard,
+  components: {},
+  data() {
+    return {
+      totalPrice: cart.totalPrice,
+      cartArr: cart.cartArr,
+    };
   },
-  cartitems: cart.cartArr,
 };
 </script>
 
